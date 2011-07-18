@@ -1,0 +1,732 @@
+/*******************************************************************
+ College_Blue CSS
+  
+ This CSS file contains all color and layout definitions 
+ for the new-college theme.
+ 
+ This theme requires the Standard theme to be present.
+ 
+*******************************************************************/
+
+/***
+ ***  Core
+ ***/
+
+a:link,
+a:visited {
+  color:#555555;
+  text-decoration:none;
+}
+
+a:hover {
+  color:#cc4400;
+  text-decoration: underline;
+    
+  }
+  
+
+
+a.whitelink:link, a.whitelink:visited {
+color: #FFFFFF;
+text-decoration: underline;
+font-size: 0.8em;
+}
+
+a.whitelink:hover {
+color: #ffffff;
+text-decoration: underline;
+font-size: 0.8em;
+}
+
+body {
+  background: #555555;
+  color: #000000;
+  border-color:#ffffff;
+  width: 960px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+body#message-index {
+  width: auto;
+}
+
+body#message-user {
+  width: auto;
+}
+
+body#message-send {
+  width: auto;
+}
+
+body#message-messages {
+  width: auto;
+  background: #ffffff;
+}
+
+body#files-index {
+  width: auto;
+  }
+  
+body#help {
+  width: auto;
+  }
+
+th.header,
+td.header,
+div.header {
+    background-color: #cccccc;
+    color: #555555;
+	}
+
+.menubar {
+/**
+  background: #dddddd url('images/menubar.jpg') repeat-x;
+**/
+  background-color: #000000;
+}
+
+.navbar {
+  background: #000000 url('images/nav_back.gif') repeat-x;
+  border-color:#ff0000;
+  color: #ffffff;
+  
+}
+
+.navbar a:link {
+    text-decoration: none;
+    color: #ffffff;
+}
+.navbar a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+.navbar a:hover {
+    text-decoration: none;
+    color: #cc4400;
+}
+
+
+.breadcrumb a{
+  color:#ffffff;
+}
+
+.breadcrumb .sep {
+ color:#ffffff;
+}
+
+
+.generalbox {
+  border:0px; 
+}
+.informationbox {
+  border-color:#cccccc; 
+}
+.feedbackbox {
+  border-color: #cccccc; 
+}
+
+.noticebox {
+  border-color:#cccccc; 
+}
+
+.errorbox {
+  color:#555555;
+  border-color:#cccccc;
+  background-color:#cccccc;
+}
+
+.tabledivider {
+  border-color:#cccccc;
+}
+
+.sitetopic {
+}
+
+.sitetopiccontent {
+  border-color:#cccccc;
+  background-color:#ffffff;
+}
+
+.unread {
+  background: #78A2CD;
+} 
+
+/***
+ *** Header
+ ***/
+
+#header-home, #header {
+background: #0099cc url(images/header-bg.jpg) repeat-x;
+height:96;
+padding:0px;
+color:#ffffff;
+
+}
+
+.headermain {
+  
+float: left;
+  
+}
+
+.headermenu { 
+
+  padding:0px;
+  }
+  
+
+
+/***
+ *** Admin
+ ***/
+
+.admin .generalboxcontent {
+  background-color:#EEEEEE; 
+}
+
+.admin .generalbox {
+  border-color:#cccccc; 
+}
+
+.admin .informationbox {
+  border-color:#cccccc; 
+  background-color:#FFFFFF; 
+}
+
+
+/***
+ *** Blocks
+ ***/
+
+.sideblock {
+    border-top: 1px solid #999999;
+    border-right: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    border-left: 1px solid #999999;
+	
+}
+
+
+
+.sideblock .header {
+  /** color: #3374ae; **/
+  color: #ffffff; 
+  text-align: left;
+  padding: 0px 4px 2px;
+  background: #000000 ;
+  border-top: 0px solid #ffffff;
+    border-right: 0px solid #ffffff;
+    border-bottom: 0px solid #ffffff;
+    border-left: 0px solid #ffffff;
+	font-size:1.3em;
+}
+
+.sideblock .content {
+color: #555555;
+border-top: 0px solid #ffffff;
+    border-right: 0px solid #ffffff;
+    border-bottom: 0px solid #ffffff;
+    border-left: 0px solid #ffffff;
+}
+
+.sideblock .header .commands {
+  float: right;
+  margin-top: 0.3em;
+}
+
+/***
+ *** Calendar
+ ***/
+
+#calendar .maincalendar,
+#calendar .sidecalendar {
+  border-color: #cccccc;
+}
+
+#calendar .header {
+  color: #555555;
+}
+
+#calendar .maincalendar table.calendarmonth th {
+  border-color: #cccccc;
+}
+
+table.minicalendar {
+  border-color:#cccccc;
+}
+
+#calendar .maincalendar .eventlist .event {
+  border-color:#cccccc;
+}
+
+#calendar .maincalendar .eventlist .event .topic,
+#calendar .maincalendar .eventlist .event .picture,
+#calendar .maincalendar .eventlist .event .side {
+  background-color:#FFFFFF;
+}
+
+#calendar .maincalendar table.calendarmonth ul.events-underway {
+  color:#555555;
+}
+
+#calendar .event_global,
+.minicalendar .event_global,
+.block_calendar_month .event_global {
+  border-color:#c7da70 !important;
+  background-color:#c7da70;
+}
+
+#calendar .event_course,
+.minicalendar .event_course,
+.block_calendar_month .event_course {
+  border-color:#cccccc !important;
+  background-color:#cccccc;
+}
+
+#calendar .event_group,
+.minicalendar .event_group,
+.block_calendar_month .event_group {
+  border-color:#fbcd60 !important;
+  background-color:#fbcd60;
+}
+
+#calendar .event_user,
+.minicalendar .event_user,
+.block_calendar_month .event_user {
+  border-color:#a9d9e5 !important;
+  background-color:#a9d9e5;
+}
+
+#calendar .duration_global,
+.minicalendar .duration_global {
+  border-top-color:#c7da70 !important;
+  border-bottom-color:#c7da70 !important;
+}
+
+#calendar .duration_course,
+.minicalendar .duration_course {
+  border-top-color:#cccccc !important;
+  border-bottom-color:#cccccc !important;
+}
+
+#calendar .duration_group,
+.minicalendar .duration_group {
+  border-top-color:#fbcd60 !important;
+  border-bottom-color:#fbcd60 !important;
+}
+
+#calendar .duration_user,
+.minicalendar .duration_user {
+  border-top-color:#a9d9e5 !important;
+  border-bottom-color:#a9d9e5 !important;
+}
+
+#calendar .weekend,
+.minicalendar .weekend {
+  color:#c93113;
+}
+
+#calendar .today,
+.minicalendar .today {
+  border-color:#c93113 !important;
+}
+
+.cal_popup_fg {
+  background-color:#FFFFFF;
+}
+
+.cal_popup_bg {
+  border-color:#000000;
+  background-color:#FFFFFF;
+}
+
+#calendar .maincalendar .filters table,
+#calendar .sidecalendar .filters table,
+.block_calendar_month .filters table {
+  background-color: #FFFFFF;
+}
+
+
+
+/***
+ *** Course
+ ***/
+
+/* course, entry-page, login */
+.headingblock {
+  background: #000000;
+  color: #ffffff;
+  border-top: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+}
+
+/* course */
+.headingblock .outline {
+  border-color:#cccccc;
+}
+
+#course-view .weekscss .section,
+#course-view .section td {
+  border-color:#999999;
+}
+
+/* .content should match the body background, sides are white. */
+#course-view .content {
+  background: #ffffff;
+ }
+
+#course-view .weekscss .section,
+#course-view .section td.side {
+  color: #ffffff;
+  background: #000000;
+}
+
+#course-view .section .side {
+}
+
+#course-view .section .left {
+}
+
+#course-view .section .right {
+}
+
+#course-view .weekscss .current,
+#course-view .current td.side {
+  background: #cccccc;
+}
+
+#course-view .weekscss .hidden,
+#course-view .hidden td.side {
+  background: #DDDDDD;
+}
+
+.categoryboxcontent,
+.courseboxcontent {
+    border-top: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    background: #ffffff;
+}
+body#course-user .section {
+    border-color:#AAAAAA;
+}
+
+
+
+/***
+ *** Login
+ ***/
+
+.loginbox,
+.loginbox.twocolumns .loginpanel,
+.loginbox .subcontent {
+  border-color:#cccccc;
+}
+
+
+/***
+ *** Message
+ ***/
+
+table.message_search_results td {
+  border-color:#cccccc;
+  }
+
+.message .author {
+  color: #6c6c6c;
+}
+
+.message .time {
+  color: #6c6c6c;
+}
+
+.message .content {
+  }
+
+/***
+ *** User
+ ***/
+
+.userpicture {
+  background:#EEEEEE; 
+}
+
+.userinfobox {
+  border-color: #cccccc;
+  background-color: #F7F7F7;
+}
+.groupinfobox {
+  border-color: #cccccc;
+  background-color: #FCFCFC;
+}
+
+
+/***
+ *** Modules: Forum
+ ***/
+
+.forumheaderlist {
+  border-color:#cccccc;
+  color: #555555;
+}
+
+.forumpost {
+  border-color:#cccccc;
+  color: #555555;
+}
+
+.forumpost .content {
+  background: #FFFFFF;
+  color: #555555;
+}
+
+.forumpost .left {
+  background:#ffffff; 
+}
+
+.forumpost .topic {
+  border-bottom-color: #cccccc;
+  background: #cccccc;
+
+}
+
+.forumpost .starter {
+  background: #cccccc;
+}
+
+.forumheaderlist .discussion .starter {
+  background: #d4d4d4;
+}
+
+.forumheaderlist td {
+  border-color: #cccccc;
+}
+
+.sideblock .post .head {
+  color:#555555;
+}
+
+.forumthread .unread {
+  background: #78A2CD;
+}
+#mod-forum-discuss .forumpost {
+  background: none;
+}
+
+#mod-forum-discuss .unread .forumpost .message {
+  border-color: #78A2CD; 
+} 
+#mod-forum-discuss .forumthread .unread {
+} 
+
+#mod-forum-index .unread {
+}
+
+
+/***
+ *** Modules: Glossary
+ ***/
+
+.glossarypost {
+  border-color: #cccccc;
+}
+
+.glossarypost .entryheader,
+.glossarypost .entryapproval,
+.glossarypost .picture,
+.glossarypost .entryattachment,
+.glossarypost .left {
+  background-color: #cccccc;
+}
+
+.glossarycomment {
+  border-color: #cccccc;
+}
+
+.glossarycomment .entryheader,
+.glossarycomment .picture,
+.glossarycomment .left {
+  background-color: #cccccc;
+
+}
+
+#mod-glossary-report .generalbox .teacher {
+  background: #cccccc;
+}
+
+.categoryheader {
+  background-color: #efefef;
+}
+
+.glossaryformatheader {
+  background-color: #cccccc;
+}
+
+
+/***
+ *** Modules: Journal
+ ***/
+
+#mod-journal-view .feedbackbox .left,
+#mod-journal-view .feedbackbox .entryheader {
+  background-color: #cccccc;
+}
+
+/***
+ *** Modules: Quiz
+ ***/
+
+body#mod-quiz-report table#attempts td {
+  border-color: #cccccc;
+}
+body#mod-quiz-report table#attempts .r1 {
+  background-color: #eeeeee;
+}
+
+
+
+/***
+ *** Misc Color
+ ***/
+
+.headermenu a:link {
+    text-decoration: none;
+    color: #ffffff;
+}
+.headermenu a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+.headermenu a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+
+.college_bluesurround {
+  background: #ffffff;
+  border-top: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+}
+
+.footer {
+    color: #ffffff;
+	font-size:0.8em;
+}
+
+.generalboxcontent {
+  background-color:#FFFFFF;
+
+}
+/***
+ *** Layout Core
+ ***/
+
+h1.main,
+h2.main,
+h3.main,
+h4.main,
+h5.main,
+h6.main {
+  text-align: center;
+}
+
+#layout-table {
+  width:100%;
+  border-collapse:separate;
+  margin-top: 8px;
+}
+
+#layout-table #left-column,
+#layout-table #middle-column,
+#layout-table #right-column
+{
+  vertical-align:top;
+}
+
+#layout-table #middle-column {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+#layout-table #left-column {
+  padding-left:0px;
+}
+
+#layout-table #right-column {
+  padding-right:2px;
+}
+
+div.headermenu 
+{
+	color:#ffffff;
+	margin-right: auto;
+	position: relative;
+	float:right;
+	top: 5px;
+	right: 5px;
+	padding:2px;
+	border-top: 0px solid #ffffff;
+  border-right: 0px solid #ffffff;
+  border-bottom: 0px solid #ffffff;
+  border-left: 0px solid #ffffff;
+font-size:0.6em;
+	
+}
+
+table.panel {
+	border-width: 0px 0px 0px 0px;
+	border-spacing: 2px;
+	padding: 3px 3px 3px 3px;
+	width: 100%;
+	color: #555555;
+	vertical-align: middle;
+	background-color: #cccccc;
+	
+}
+
+table.panel td {
+	border-width: 1px 1px 1px 1px;
+	padding: 3px 3px 3px 3px;
+	border-style: solid solid solid solid;
+	border-color: #CCCCCC #CCCCCC #CCCCCC #CCCCCC;
+	background-color: #ffffff;
+	-moz-border-radius: 0px 1px 0px 0px;
+	vertical-align: middle;
+}
+
+table.usres {
+	border-width: 0px 0px 0px 0px;
+	border-spacing: 0px;
+	width: 100%;
+	color: #555555;
+	vertical-align: middle;
+	
+}
+table.usres td {
+	padding: 3px 3px 3px 3px;
+	background-color: #cccccc;
+	-moz-border-radius: 0px 0px 0px 0px;
+	vertical-align: middle;
+}
+
+/* SS-Controls */
+ul.ss-controls {
+
+margin: 0;
+padding: 0;
+list-style: none;
+
+}
+
+ul.ss-controls li {
+
+padding: 0;
+margin: 0;
+}

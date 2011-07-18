@@ -1,0 +1,728 @@
+/******************************************************************
+
+	Name: Solstice
+	Description: Solstice is a three-column theme for Moodle.
+	Theme URL: http://newschoollearning.com/premium-themes/solstice/
+	Support URL: http://support.newschoollearning.com/forum/solstice
+	Author: Patrick Malley
+	Author URI: http://newschoollearning.com
+	Version: 1.0
+
+  Note: Customize, edit, poke, prod, and adapt to your needs.
+  However, do not share.  Unless other arrangements have been made,
+  this style sheet (regardless of modification) remains the 
+  intellectual property of Patrick Malley and is licensed for use
+  on a single installation of Moodle.
+ 
+*******************************************************************/
+
+
+*, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 0.9em/1.4em Tahoma,Verdana,Arial,lucida,sans-serif;
+}
+
+#page {
+  padding: 0;
+  margin: 0;
+}
+
+#wrapper {
+  min-width: 400px;
+  max-width: 960px;
+  margin: 15px auto;
+  background: #fff url(pix/bg/bg_content_top_left.png) no-repeat top left;
+}
+
+#content {
+  padding: 7px;
+}
+
+#topright {
+  background: url(pix/bg/bg_content_top_right.png) no-repeat top right;
+}
+
+#bottomleft {
+  background: url(pix/bg/bg_content_bottom_left.png) no-repeat bottom left;
+}
+
+#bottomright {
+  background: url(pix/bg/bg_content_bottom_right.png) no-repeat bottom right;
+}
+
+#layout-table {
+  margin: 0;
+}
+
+h2.main {
+  margin: 15px 175px;
+  padding: 5px;
+}
+
+h4 {
+  padding-top: 10px;
+}
+.generalbox {
+  border: none;
+}
+
+p {
+  padding-bottom: 10px;
+}
+
+fieldset.hidden,
+fieldset.felement,
+fieldset.invisiblefieldset {
+  background: none;
+}
+
+#adminsettings fieldset {
+  border: 1px solid;
+}
+
+legend {
+  padding: 0 6px;
+  border: 1px solid;
+}
+
+.cell 
+/*necessary for some reason*/ {
+  background: none !important;
+}
+
+.generaltable tbody tr td {
+  padding: 3px 3px 0 3px !important;
+  font-size: 0.9em;
+}
+
+.center {
+  text-align: center;
+}
+
+blockquote {
+    margin:1em 3em;
+    padding:0 0 0 4px;  
+    color:#666;
+    border-left:2px solid;
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  padding-bottom: 10px;
+  margin-left: 1em;
+}
+
+ol {
+  margin-left: 2.3em;
+}
+
+ul li {
+  background: url(pix/arrow.png) no-repeat left .3em;
+  padding-left: 1.3em;
+}
+
+.sideblock ul li,
+ul#nav li,
+.breadcrumb li,
+ul.section li,
+ul.teachers li {
+	background: none;
+	padding: 0;
+}
+
+/*******************
+*  Links  *
+*******************/
+
+a:hover,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+
+/*******************
+*  Header  *
+*******************/
+
+#header-home {
+  height: 160px;
+}
+
+#header {
+  height: 90px;
+}
+
+#header-home,
+#header {
+  background: url(pix/bg/bg_header.png) repeat-x bottom;
+}
+
+#header-home .headermain {
+  margin: 55px 0 0 50px;
+  color: #fff;
+  font-weight: normal;
+}
+
+#header .headermain {
+  margin: 45px 0 0 20px;
+  color: #fff;
+}
+
+#header-home .headermain h1 {
+  font: 1.8em normal;
+  font-family: sans-serif;
+}
+
+#header .headermain h1 {
+  font: 1.4em normal;
+  font-family: sans-serif;
+}
+
+.headermain span {
+  padding-left: 65px;
+  font-size: 0.9em;
+}
+
+.headermenu {
+  margin: 7px 10px;
+}
+
+ul#nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  float: left;
+  border-top: 1px solid #fff;
+  background: url(pix/bg/bg_navbar.png) repeat-x top;
+}
+
+.navbar {
+  padding: 0;
+  border: none;
+  border-top: 1px solid #fff;
+  background: url(pix/bg/bg_navbar.png) repeat-x top;
+  height: 44px;
+}
+
+.breadcrumb ul {
+  height: 100%;
+}
+
+.breadcrumb li {
+  height: 100%;
+  display: block;
+  float: left;
+  padding: 6px 10px;
+  color: #f9f9f9;
+}
+
+ul#nav li {
+  float: left;
+  height: 44px;
+}
+
+.breadcrumb li a:link,
+.breadcrumb li a:visited,
+.breadcrumb li a:hover,
+.breadcrumb li a:active {
+  color: #fff;
+}
+
+.breadcrumb li a {
+  display: block;
+  height: 100%;
+  padding: 0.5em 1.6em 0.35em 1em;
+  margin-top: -6px;
+  margin-left: -10px;
+  border-right: 1px solid #fff;
+}
+
+ul#nav a {
+  display: block;
+  float: left;
+  padding: 0 1.2em;
+  line-height: 34px;
+  text-decoration: none;
+  border-right: 1px solid #fff;
+  color: #fff;
+}
+
+.navbar .sep {
+  display: none;
+}
+
+.navbutton {
+  padding: 4px;
+}
+ul#nav a:hover {
+  text-decoration: none;
+  color: #fff !important;
+}
+
+ul#nav li.current_page_item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*******************
+*  Footer  *
+*******************/
+
+#footer{
+  margin: 0;
+  background: url(pix/bg/bg_footer.png) repeat-x top;
+  height: 109px;
+}
+
+#footer .logininfo {
+  float: right;
+  margin: 7px 5px 0;
+}
+
+.homelink,
+.sitelink {
+  margin: 1em 0;
+  clear: both;
+}
+
+#footer .helplink {
+  float: left;
+  margin: 7px 5px 0;
+}
+
+#credits {
+  font-size: 0.75em;
+  padding: 0 5px;
+  line-height: 0.9em;
+}
+
+#credits a:hover,
+#credits a:active {
+  color: #333;
+}
+
+/******************
+*  Sideblocks  *
+******************/
+
+.sideblock {
+  width: 212px;
+  background: url(pix/bg/bg_block_bottom.png) no-repeat bottom left;
+  padding-bottom: 10px;
+  
+}
+
+.sideblock .content,
+.sideblock .title .commands {
+  background: none;
+  border: none;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.sideblock .title .commands {
+  padding: 5px;
+  margin: 0 -6px -6px -6px;
+}
+
+.commands .icon {
+  padding-right: 2px;
+}
+
+.sideblock .content ul li {
+  line-height: 1.6em;
+}
+
+.sideblock .content ul li .buttons {
+  padding: 0 5px 3px;
+}
+
+.sideblock .searchform {
+  text-align: left;
+}
+
+.sideblock .searchform .helplink {
+  float: right;
+}
+
+.sideblock .header,
+.block_adminblock .header {
+  border: none;
+  background: url(pix/bg/bg_block_top.png) no-repeat top left;
+  padding-top: 1px;
+}
+
+.sideblock .title {
+  padding: 0 2px;
+  border-bottom: 1px solid;
+}
+
+.sideblock .title h2,
+.block_adminblock .header {
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+.sideblock .section_add_menus {
+  padding-top: 15px;
+}
+
+.sideblock a:hover,
+.sideblock a:active {
+  color: #333 !important;
+}
+
+form#login.loginform .c1 {
+  margin-bottom: 7px;
+}
+
+input#login_username,
+input#login_password {
+  margin-right: 20px;
+  width: 75px;
+}
+
+.sideblock .buttons {
+  margin: 0;
+}
+
+/***********************
+*  Middle Column  *
+***********************/
+
+h2.headingblock {
+  border: none;
+  border-bottom: 1px solid;
+  padding: 2px;
+}
+
+.categorybox {
+  border: none;
+}
+
+/***********************
+*  Forums  (& Calendar)*
+***********************/
+
+.forumpost {
+  border: none;
+}
+
+#blog-index .sideblock {
+  margin: 20px;
+}
+
+.forumpost .picture,
+.eventlist .picture {
+  background:  url(pix/bg/forum/bg_forum_top_left.png) no-repeat top right;
+  vertical-align: bottom;
+  padding: 0 19px 0 0 !important;
+}
+
+#calendar .maincalendar .eventlist .event,
+#calendar .eventlist .description {
+  border:none !important;
+}
+ #calendar .maincalendar .eventlist .event {
+  padding-top: 20px;
+}
+#calendar .maincalendar .eventlist .event .topic,
+#calendar .maincalendar .eventlist .event .picture,
+#calendar .maincalendar .eventlist .event .side,
+#calendar .eventlist .description {
+  background-color:#fff;
+}
+
+.eventlist .date {
+  padding:0 10px;
+  font-size: 0.7em;
+}
+
+.forumpost .topic,
+.eventlist .topic {
+  background:  url(pix/bg/forum/bg_forum_top_right.png) no-repeat top right;
+  border: none;
+}
+
+.forumpost .author {
+  border-bottom: 1px solid #fff;
+}
+
+.forumpost .side,
+.eventlist .side {
+  background: url(pix/bg/forum/bg_forum_bottom_left.png) repeat-y bottom right;
+}
+
+.forumpost .content,
+.eventlist .description {
+  background: #d6ecf5 url(pix/bg/forum/bg_forum_bottom_right.png) repeat-y bottom right;
+  padding: 2px 15px 10px 5px;
+}
+
+.forumpost .commands {
+  padding-top: 10px;
+  font-size: 0.8em;
+}
+
+#eventform table tbody tr td {
+  padding: 7px 3px;
+}
+img.userpicture,
+img.grouppicture {
+  background: url(pix/bg/shadow.gif) no-repeat bottom right;
+  padding: 0 5px 5px 0;
+  border-top: 1px solid #f8f8f8;
+  border-left: 1px solid #f8f8f8;
+}
+
+.sideblock img.userpicture {
+  background: url(pix/bg/shadow_small.gif)no-repeat bottom right;
+  padding: 0 2px 2px 0;
+}
+
+.forumolddiscuss {
+  padding-top: 10px;
+  font-size: 0.9em;
+}
+
+#intro.box {
+  border: 1px solid;
+  margin-top: 25px;
+}
+
+.singlebutton {
+  margin: 20px;
+  text-align: center;
+}
+
+.singlebutton input {
+  margin: auto;
+}
+/*included generaltable & logtable qualities*/
+
+.forumheaderlist .discussion .topic {
+  background: none;
+}
+
+.forumheaderlist,
+.generaltable,
+.logtable,
+.files,
+#categoryquestions {
+  border: 1px solid #f7f7f7;
+  margin-bottom: 10px;
+}
+
+.forumheaderlist th,
+.generaltable th,
+.logtable th,
+.files th,
+#categoryquestions th {
+  background: #ddd;
+  border-bottom: 1px solid #aaa;
+  border-left: 1px solid #fff;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 2px 3px 0 0;
+}
+
+.logtable th,
+#participants th {
+  padding: 2px 5px 0;
+  font-size: 0.8em;
+}
+.forumheaderlist td,
+.generaltable td,
+.logtable td,
+.files td,
+#categoryquestions td {
+  border: none;
+  border-left: 1px solid #f7f7f7;
+  padding: 0 3px;
+}
+
+#categoryquestions select#menusortorder {
+  float: right;
+  margin-right: 5px;
+}
+.forumheaderlist .r0,
+.generaltable .r0 {
+  background: #f7f7f7;
+}
+
+.discussioncontrols td,
+.discussioncontrols div {
+  float: right;
+}
+
+.forumthread {
+  padding: 10px 35px;
+}
+
+/**********************
+*  Specific Pages  *
+**********************/
+
+#course-index-index .categorybox,
+#course-index .categorybox {
+  margin: 0 200px;
+}
+
+#coursesearch,
+.addcategory,
+#coursesearch2 
+
+/*!##$@!*/ {
+  text-align: center;
+  margin: 15px;
+}
+
+.courseboxes {
+  margin: 5px 100px;
+}
+
+.coursebox {
+  border: none;
+  border-bottom: 1px dashed;
+  padding-bottom: 13px;
+}
+
+.categorylist {
+  margin: 4px 0;
+  width: 100%;
+}
+
+.loginpanel .forgotsub,
+.loginpanel .guestsub {
+  border-top-style: dashed;
+}
+
+#course-index .generalbox tbody tr td {
+  padding: 2px 15px;
+}
+
+.userinfobox {
+  border: none;
+}
+
+.userinfobox td.content {
+  border: 1px solid;
+}
+
+.searchbox {
+  margin: auto;
+}
+
+.searchbox td {
+  padding: 4px;
+}
+
+body#course-user .section {
+  margin: 15px 5px;
+}
+
+body#course-user .section .content {
+  margin: 20px 15px 5px;
+}
+
+body#course-user .section td {
+  padding: 3px 10px;
+}
+
+body#course-user .section .left {
+  padding-right: 20px;
+}
+
+body#mod-resource-view .box {
+  margin: 5px 75px;
+}
+
+table.files {
+  width: 100%;
+}
+
+table.files td {
+  padding: 2px 10px;
+}
+
+.form-textarea {
+  width: 100%;
+}
+
+#form1 tr td {/*course backup table*/
+  padding:4px;
+}
+
+#reset h3.main {
+  margin: 15px 0px 2px;
+  text-decoration: underline;
+}
+
+.plugin {
+  padding: 3px;
+}
+
+.questionbank {
+  border: 1px solid;
+  padding: 10px;
+}
+
+.questionbank td {
+  padding: 6px;
+}
+
+.questionbank input {
+  margin: 5px;
+}
+
+.questionbank #displayoptions {
+  border-bottom: 1px dashed;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.questionbank .boxaligncenter {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.questionbank .boxaligncenter table {
+  margin: auto;
+}
+
+table.quiz-edit-selected {
+  margin: auto;
+}
+
+.block_admin_tree.sideblock .link.current {
+  background:none;
+}
+
+.profileeditor {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.section_add_menus .horizontal div {
+	float: right;
+	margin-top:5px;
+}
+
+#calendar .maincalendar .bottom {
+  position: relative;
+  margin-top: 45%;
+}  
+
+#course-view h2.headingblock {
+  display: none;
+}

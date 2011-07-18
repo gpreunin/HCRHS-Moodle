@@ -1,0 +1,73 @@
+<?PHP // $Id$ 
+      // enrol_database.php - created with Moodle 1.7 beta + (2006101003)
+
+
+$string['autocreate'] = 'Courses can be created automatically if there are enrolments to a course that doesn\'t yet exist in Moodle.';
+$string['autocreatecategory'] = 'If courses are automatically created and they belong to a category that doesn\'t yet exist in Moodle, those categories can be created automatically.';
+$string['autocreation_settings'] = 'Autocreation Settings';
+$string['autoupdate'] = 'Courses can be updated automatically if there are enrolments to a course that already exist in Moodle.';
+$string['category'] = 'The default category for auto-created courses (unless you use the enrol_coursecategory setting below.)';
+$string['categoryseparator'] = 'Leave this empty if you don\'t want to use subcategories in your external database. Otherwise, specify the character you are using as the category separator. You need to specify the \'path\' of the subcategory in the enrol_coursecategory field as the names of the categories separated by the category separator. For example, if we use \'/\' as the separator, we should have something like <b>category1/category2</b> (i.e, <em>category2</em> is inside category <em>category1</em>, which is a top level category.)';
+$string['coursecategory'] = 'Optional: The name of the field where the course category <b>name</b> is stored. If you want each course to be in a given category (rather than the default one) fill this in.';
+$string['coursecost'] = 'Optional: The name of the field where the course cost is stored.';
+$string['courseenrollable'] = 'Optional: The name of the field where the course enrollable flag is stored.';
+$string['courseformat'] = 'Optional: The name of the field where the course format is stored.';
+$string['coursefullname'] = 'Optional: The name of the field where the course fullname is stored.';
+$string['coursegroupmode'] = 'Optional: The name of the field where the course group mode is stored.';
+$string['coursegroupmodefoce'] = 'Optional: The name of the field where the course group mode forced is stored.';
+$string['courseguest'] = 'Optional: The name of the field where the course guest is stored.';
+$string['courseid'] = 'The name of the field where the course ID is stored. The values of this field are used to match those in the \"enrol_localcoursefield\" field in Moodle\'s course table.';
+$string['courseidnumber'] = 'Optional: The name of the field where the course idnumber is stored.';
+$string['coursenewsitems'] = 'Optional: The name of the field where the course number of news items is stored.';
+$string['coursenumsections'] = 'Optional: The name of the field where the course number of sections is stored.';
+$string['coursepassword'] = 'Optional: The name of the field where the course password is stored.';
+$string['courseshortname'] = 'The name of the field where the course shortname is stored.';
+$string['courseshowgrades'] = 'Optional: The name of the field where the course show grades is stored.';
+$string['coursestartdate'] = 'Optional: The name of the field where the course start date is stored.';
+$string['coursesummary'] = 'Optional: The name of the field where the course summary is stored.';
+$string['coursetable'] = 'Then name of the table where we expect to find the course details in (short name, fullname, ID, etc.)';
+$string['coursetemplate'] = 'Optional: The name of the field where the <b>shortname</b> of the template course is stored. If you want each course to have a given course as the template (rather than the default one) fill this in.';
+$string['coursetheme'] = 'Optional: The name of the field where the course theme is stored.';
+$string['coursevisible'] = 'Optional: The name of the field where the course visible is stored.';
+$string['dbhost'] = 'Server IP name or number';
+$string['dbname'] = 'Database name';
+$string['dbpass'] = 'Server password';
+$string['dbtable'] = 'Database table';
+$string['dbtype'] = 'Database type';
+$string['dbuser'] = 'Server user';
+$string['defaultcourseroleid'] = 'The role that will be assigned by default if no other role is specified.';
+$string['description'] = 'You can use a external database (of nearly any kind) to control your enrolments. It is assumed your external database contains a field containing a course ID, and a field containing a user ID. These are compared against fields that you choose in the local course and user tables.';
+$string['disableunenrol'] = 'If set to yes users previously enrolled by the external database plugin will not be unenrolled by the same plugin regardless of the database contents.';
+$string['enrolname'] = 'External Database';
+$string['enrol_database_autocreation_settings'] = 'Auto-creation of new courses';
+$string['general_options'] = 'General Options';
+$string['host'] = 'Database server hostname.';
+$string['ignorehiddencourse'] = 'If set to yes users will not be enroled on courses that are set to be unavailable to students.';
+$string['localcoursefield'] = 'The name of the field in the course table that we are using to match entries in the remote database (eg idnumber).';
+$string['localrolefield'] = 'The name of the field in the roles table that we are using to match entries in the remote database (eg shortname).';
+$string['localuserfield'] = 'The name of the field in the user table that we are using to match entries in the remote database (eg idnumber).';
+$string['local_fields_mapping'] = 'Moodle (local) database fields';
+$string['name'] = 'The specific database to use.';
+$string['pass'] = 'Password to access the server.';
+$string['remotecoursefield'] = 'The name of the field in the remote table that we are using to match entries in the course table.';
+$string['remoterolefield'] = 'The name of the field in the remote table that we are using to match entries in the roles table.';
+$string['remotetimeendfield'] = 'Optional: The name of the field in the remote table that we are using for enrollment end date.';
+$string['remotetimestartfield'] = 'Optional: The name of the field in the remote table that we are using for enrollment start date.';
+$string['remoteuserfield'] = 'The name of the field in the remote table that we are using to match entries in the user table.';
+$string['remote_fields_mapping'] = 'Enrolment (remote) database fields.';
+$string['restore_coursetemplate'] = 'Backup and then restore the course that matches <strong>enrol_coursetemplate</strong> setting into the newly created course.';
+$string['restore_usetemplate'] = 'Use the course files <strong>backupdata/template</strong> directory.  If a backup, using the default backup file name, is stored in the backupdata/template directory, then it will be used for the course restore for the <strong>enrol_restore_coursetemplate</strong> setting.  If no backup is found in the backupdata/template directory, then a new backup will automatically be generated and permanently stored there.';
+$string['server_settings'] = 'External Database Server Settings';
+$string['student_coursefield'] = 'The name of the field in the student enrolment table that we expect to find the course ID in.';
+$string['student_l_userfield'] = 'The name of the field in the local user table that we use to match the user to a remote record for students (eg idnumber).';
+$string['student_r_userfield'] = 'The name of the field in the remote student enrolment table that we expect to find the user ID in.';
+$string['student_table'] = 'The name of the table where student enrolments are stored.';
+$string['teacher_coursefield'] = 'The name of the field in the teacher enrolment table that we expect to find the course ID in.';
+$string['teacher_l_userfield'] = 'The name of the field in the local user table that we use to match the user to a remote record for teachers (eg idnumber).';
+$string['teacher_r_userfield'] = 'The name of the field in the remote teacher enrolment table that we expect to find the user ID in.';
+$string['teacher_table'] = 'The name of the table where teacher enrolments are stored.';
+$string['template'] = 'Optional: auto-created courses can copy their settings from a template course. Type here the shortname of the template course.';
+$string['type'] = 'Database server type.';
+$string['user'] = 'Username to access the server.';
+
+?>

@@ -1,0 +1,188 @@
+<table cellpadding="9" cellspacing="0">
+<tr valign="top">
+    <td align="right"><?php print_string("config_media_sharing", "block_inwicast") ?></td>
+    <td>
+    <input name="block" type="hidden" value="<?php echo intval($_REQUEST['block']); ?>" />
+    <select name="block_inwicast_media_sharing">
+     <option value="1" <?php if(isset($CFG->block_inwicast_media_sharing)){ 
+     if($CFG->block_inwicast_media_sharing){ echo "selected=\"selected\"";}
+     }else{
+         echo "selected=\"selected\"";
+     }?>     
+     ><?php p(get_string('yes')) ?></option>
+     <option value="0" <?php if(isset($CFG->block_inwicast_media_sharing)){ 
+         if(!$CFG->block_inwicast_media_sharing){ echo "selected=\"selected\""; }
+     }?>
+     ><?php p(get_string('no')) ?></option>
+    </select>
+    </td>
+</tr>
+<tr valign="top">
+    <td align="right"><?php print_string("config_rss_enabled", "block_inwicast") ?></td>
+    <td>
+    <input name="block" type="hidden" value="<?php echo intval($_REQUEST['block']); ?>" />
+    <select name="block_inwicast_rss_enabled">
+     <option value="1" <?php if(isset($CFG->block_inwicast_rss_enabled)){ 
+     if($CFG->block_inwicast_rss_enabled){ echo "selected=\"selected\"";}
+     }else{
+         echo "selected=\"selected\"";
+     }?>     
+     ><?php p(get_string('yes')) ?></option>
+     <option value="0" <?php if(isset($CFG->block_inwicast_rss_enabled)){ 
+         if(!$CFG->block_inwicast_rss_enabled){ echo "selected=\"selected\""; }
+     }?>
+     ><?php p(get_string('no')) ?></option>
+    </select>
+    </td>
+</tr>
+<tr><td colspan="2"><hr></td></tr>
+
+<tr valign="top">
+    <td align="right"><?php print_string('config_default_video_width', 'block_inwicast') ?></td>
+    <td>
+    <input name="block_inwicast_default_video_width" type="text" size="4" value="<?php 
+    if(isset($CFG->block_inwicast_default_video_width)) {
+        p($CFG->block_inwicast_default_video_width);
+    } else {
+        p('640');
+    } ?>" />
+    </td>
+</tr>
+
+<tr valign="top">
+    <td align="right"><?php print_string('config_default_video_height', 'block_inwicast') ?></td>
+    <td>
+    <input name="block_inwicast_default_video_height" type="text" size="4" value="<?php 
+    if(isset($CFG->block_inwicast_default_video_height)) {
+        p($CFG->block_inwicast_default_video_height);
+    } else {
+        p('480');
+    } ?>" />
+    </td>
+</tr>
+
+<tr valign="top">
+    <td align="right"><?php print_string('config_streaming_server_live', 'block_inwicast') ?></td>
+    <td>
+    <input name="block_inwicast_streaming_server_live" type="text" size="50" value="<?php 
+    if(isset($CFG->block_inwicast_streaming_server_live)) {
+        p($CFG->block_inwicast_streaming_server_live);
+    } else {
+        p('');
+    } ?>" />
+    </td>
+</tr>
+
+<tr valign="top">
+    <td align="right"><?php print_string('config_streaming_server_vod', 'block_inwicast') ?></td>
+    <td>
+    <input name="block_inwicast_streaming_server_vod" type="text" size="50" value="<?php 
+    if(isset($CFG->block_inwicast_streaming_server_vod)) {
+        p($CFG->block_inwicast_streaming_server_vod);
+    } else {
+        p('');
+    } ?>" />
+    </td>
+</tr>
+
+<tr valign="top">
+    <td align="right"><?php print_string('config_streaming_server_ftp', 'block_inwicast') ?></td>
+    <td>
+    <input name="block_inwicast_streaming_server_ftp" type="text" size="50" value="<?php 
+    if(isset($CFG->block_inwicast_streaming_server_ftp)) {
+        p($CFG->block_inwicast_streaming_server_ftp);
+    } else {
+        p('');
+    } ?>" />
+    </td>
+</tr>
+
+<tr valign="top">
+    <td align="right"><?php print_string('config_streaming_server_ftp_login', 'block_inwicast') ?></td>
+    <td>
+    <input name="block_inwicast_streaming_server_ftp_login" type="text" size="50" value="<?php 
+    if(isset($CFG->block_inwicast_streaming_server_ftp_login)) {
+        p($CFG->block_inwicast_streaming_server_ftp_login);
+    } else {
+        p('');
+    } ?>" />
+    </td>
+</tr>
+
+<tr valign="top">
+    <td align="right"><?php print_string('config_streaming_server_ftp_password', 'block_inwicast') ?></td>
+    <td>
+    <input name="block_inwicast_streaming_server_ftp_password" type="text" size="50" value="<?php 
+    if(isset($CFG->block_inwicast_streaming_server_ftp_password)) {
+        p($CFG->block_inwicast_streaming_server_ftp_password);
+    } else {
+        p('');
+    } ?>" />
+    </td>
+</tr>
+
+<tr><td colspan="2"><hr></td></tr>
+<tr valign="top">
+    <td align="right"> <?php print_string("config_video_import_enabled", "block_inwicast") ?></td>
+    <td>
+    <select name="block_inwicast_video_soap_enabled">
+     <option value="1" <?php if(isset($CFG->block_inwicast_video_soap_enabled)){ 
+     if($CFG->block_inwicast_video_soap_enabled){ echo "selected=\"selected\"";}
+     }?>     
+     ><?php p(get_string('yes')) ?></option>
+     <option value="0" <?php if(isset($CFG->block_inwicast_video_soap_enabled)){ 
+         if(!$CFG->block_inwicast_video_soap_enabled){ echo "selected=\"selected\""; }
+     }else{
+         echo "selected=\"selected\"";
+     }?>
+     ><?php p(get_string('no')) ?></option>
+    </select>
+    </td>
+</tr>
+
+<tr valign="top">
+    <td align="right"><?php print_string('config_video_import_servername', 'block_inwicast') ?></td>
+    <td>
+    <input name="block_inwicast_video_import_servername" type="text" size="50" value="<?php 
+    if(isset($CFG->block_inwicast_video_import_servername)) {
+        p($CFG->block_inwicast_video_import_servername);
+    } else {
+        p('');
+    } ?>" />
+    </td>
+</tr>
+<tr><td colspan="2"><hr></td></tr>
+<tr valign="top">
+    <td align="right"> <?php print_string("config_googlemap_enabled", "block_inwicast") ?></td>
+    <td>
+    <select name="block_inwicast_gmap_enabled">
+     <option value="1" <?php if(isset($CFG->block_inwicast_gmap_enabled)){ 
+     if($CFG->block_inwicast_gmap_enabled){ echo "selected=\"selected\"";}
+     }?>     
+     ><?php p(get_string('yes')) ?></option>
+     <option value="0" <?php if(isset($CFG->block_inwicast_gmap_enabled)){ 
+         if(!$CFG->block_inwicast_gmap_enabled){ echo "selected=\"selected\""; }
+     }else{
+         echo "selected=\"selected\"";
+     }?>
+     ><?php p(get_string('no')) ?></option>
+    </select>
+    </td>
+</tr>
+
+<tr valign="top">
+    <td align="right"><?php print_string('config_googlemap_key', 'block_inwicast') ?></td>
+    <td>
+    <input name="block_inwicast_gmap_key" type="text" size="50" value="<?php 
+    if(isset($CFG->block_inwicast_gmap_key)) {
+        p($CFG->block_inwicast_gmap_key);
+    } else {
+        p('');
+    } ?>" />
+    </td>
+</tr>
+<tr>
+    <td colspan="3" align="center">
+    <input type="submit" value="<?php print_string("savechanges") ?>" /></td>
+</tr>
+</table>

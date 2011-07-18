@@ -1,0 +1,44 @@
+
+</div> <!-- end div containerContent -->
+<!-- START OF FOOTER -->
+<div id="footer">
+
+<?php if ($navigation and false) { ?>
+    <div class="navbar clearfix">
+        <div class="breadcrumb"><?php print_navigation($navigation); ?></div>
+        <div class="menu"><?php echo $menu; ?></div>
+    </div>
+<?php } ?>
+<!-- <table width="100%" border="0" cellpadding="5" cellspacing="0" bgcolor="#dddddd">
+  <tr> 
+    <td><P><font color="#333333" size="1">This site is maintained and operated by Learner 
+          Services, the Learning Resource Centre and IT Services. For more information 
+          please <a href="mailto:moodle@newbury-college.ac.uk">contact us</a>.</font></P>
+	  
+     </td>
+	 </tr>
+	 </table>
+-->
+<div class="footer">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#222222">
+  <tr> 
+    <td width="180px" align="left" valign="bottom"><p><a href="http://www.hcrhs.k12.nj.us"><img src="<?php echo $CFG->httpswwwroot.'/theme/'.current_theme() ?>/images/hcshield_small.png" width="64" height="64" border="0" align="absmiddle"></a> &copy; 2008 </p>
+     </td>
+       <td width="594px" align="center" valign="middle"> 
+       <p class="footer">Hunterdon Central Regional High School is not responsible for the content of external internet sites.</p></td>
+    <td width="180px" align="right" valign="bottom"> 
+      <a class="whitelink" href="http://www.hcrhs.k12.nj.us/">School Website</a><BR>
+	  <a class="whitelink" href="javascript:void(0);">Terms of Use</a><BR>
+	  <a class="whitelink" href="http://moodle.org">Moodle.org</a></td>
+  </tr>
+</table>
+</div>
+<?php if (!empty($performanceinfo)) {
+          echo $performanceinfo;
+} ?>
+
+</div>
+</div>
+</div>
+</body>
+</html>

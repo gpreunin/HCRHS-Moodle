@@ -1,0 +1,94 @@
+/******************************************************************
+
+	Name: NewSchool Learning CSS Extras
+	Description: This document contains "CSS Extras" 
+	that can be appended to any Moodle theme.
+	Author: Patrick Malley
+	Author URI: http://newschoollearning.com
+	Version: 1.0
+
+  Note: These styles are adapted from the work of Dean Robinson:
+  http://www.deanjrobinson.com.  Background images come from
+  the fabulous "Silk" set at http://famfamfam.com.  Newschool
+  Learning does not claim license over these styles.
+ 
+*******************************************************************/
+
+
+/*************************
+*  Style Extras   *
+*************************/
+
+.download {
+	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #C9D2C9 url('pix/extras/package_go.png') no-repeat .5em center;
+	border-bottom: 2px solid #383;
+	border-top: 2px solid #383;
+}
+
+.alert,
+.errorboxcontent {
+	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #EA9089 url('pix/extras/exclamation.png') no-repeat .5em center;
+	border-bottom: 2px solid #f33;
+	border-top: 2px solid #f33;
+}
+
+.errorbox {
+  margin: auto !important;
+  border-left: none;
+  border-right: none;
+}
+.information {
+	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #AFB0BC url('pix/extras/information.png') no-repeat .5em center;
+	border-bottom: 2px solid #33f;
+	border-top: 2px solid #33f;
+}
+
+.construction {
+	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #ffffd5 url('pix/extras/error.png') no-repeat .5em center;
+	border-bottom: 2px solid #ff3;
+	border-top: 2px solid #ff3;
+}
+
+.code, code {
+  	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #aaa url('pix/extras/application_osx_terminal.png') no-repeat .5em center;
+	border-bottom: 2px solid #444;
+	border-top: 2px solid #444;
+	font-family: 'Courier New', Courier, Fixed;
+	font-size: 1.2em;
+}
+
+.note,
+.generalbox.adminwarning {
+	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #ccc url('pix/extras/page_white_text.png') no-repeat .5em center;
+	border-bottom: 2px solid #444;
+	border-top: 2px solid #444;
+}
+
+.new {
+	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #A09187 url('pix/extras/new.png') no-repeat .5em center;
+	border-bottom: 2px solid #643;
+	border-top: 2px solid #643;
+	color: #000;
+}
+

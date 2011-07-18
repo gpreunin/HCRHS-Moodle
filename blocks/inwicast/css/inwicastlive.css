@@ -1,0 +1,39 @@
+.chatzone {
+	width: 320px;
+	height: 180px;
+	overflow: auto;
+	border-bottom: 1px solid rgb(204, 204, 204);
+}
+ 
+.toggler {
+	color: #222;
+	margin: 0;
+	padding: 2px 5px;
+	background: #D7E3F2;
+	border: 1px solid rgb(204, 204, 204);
+	cursor: default;
+}
+
+.title {
+	color: #222;
+	margin: 0;
+	padding: 2px 5px;
+	background: #D7E3F2;
+	border: 1px solid rgb(204, 204, 204);
+}
+ 
+.element {
+ 	background: #F7FAFD;
+	border: 1px solid rgb(204, 204, 204);
+
+}
+ 
+.element p {
+	margin: 0;
+	padding: 4px;
+}
+ 
+.float-right {
+	padding:10px 10px;
+	float:right;
+}

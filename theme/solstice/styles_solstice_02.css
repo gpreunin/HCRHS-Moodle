@@ -1,0 +1,168 @@
+/******************************************************************
+
+	Name: Solstice_02
+	Description: Solstice is a three-column theme for Moodle.
+	Theme URL: http://newschoollearning.com/premium-themes/solstice/
+	Support URL: http://support.newschoollearning.com/forum/solstice
+	Author: Patrick Malley
+	Author URI: http://newschoollearning.com
+	Version: 1.0
+
+  Note: Customize, edit, poke, prod, and adapt to your needs.
+  However, do not share.  Unless other arrangements have been made,
+  this style sheet (regardless of modification) remains the 
+  intellectual property of Patrick Malley and is licensed for use
+  on a single installation of Moodle.
+ 
+*******************************************************************/
+
+
+html, 
+#page {
+  background: #b7b7b7;
+}
+
+h2.main,
+body#course-user h2 {
+    color: #333;
+    border-bottom-color: #a7eefd;
+}
+
+legend {
+  border-color: #666;
+  background: #ccc;
+}
+/*******************
+*  Links  *
+*******************/
+
+a:link,
+a:visited {
+  color: #900;
+}
+
+a:hover,
+a:active {
+  color: #393939;
+}
+/*******************
+*  Header  *
+*******************/
+
+.headermenu {
+  color: #fff;
+}
+
+.headermenu a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.headermenu a:hover {
+  text-decoration: none;}
+
+ul#nav a:hover {
+  background: #5a0000;
+}
+
+/********************
+*  Footer  *
+********************/
+
+#credits a {
+  color: #b7b7b7;
+}
+
+#footer a:link,
+#footer a:visited {
+  color: #333;
+}
+
+#footer a:hover,
+#footer a:active {
+  color: #fff;
+}
+
+.homelink a {
+  background: #5a0000;
+  color: #fff !important;
+}
+/********************
+*  Sideblocks  *
+********************/
+
+.sideblock .content,
+.sideblock .title .commands,
+.loginbox,
+#intro.box,
+fieldset,
+.userinfobox td.content,
+#content .plugin,
+.questionbank,
+#adminsettings fieldset {
+    border-color: #ccc;
+    background: #e6e6e6;
+}
+
+.sideblock .title,
+.questionbank #displayoptions {
+    border-color: #cfcfcf;
+}
+
+.sideblock .title h2,
+.block_adminblock .header {
+  color: #333;
+}
+
+.sideblock a {
+  color: #900;
+}
+
+/*****************************
+*  Middle Column  *
+*****************************/
+
+ h2.headingblock,
+ blockquote {
+  color: #333;
+  border-color: #a7eefd;
+}
+
+/**********************
+*  Forums  *
+**********************/
+
+.forumheaderlist tr:hover,
+.generaltable tr:hover,
+.logtable tr:hover,
+.files tr:hover {
+  background: #ccc;
+}
+
+#categoryquestions td {
+  background: #f9f9f9;
+}
+
+/**********************
+*  Specific Pages  *
+**********************/
+
+.coursebox,
+.loginpanel .forgotsub,
+.loginpanel .guestsub {
+  border-color: #8a0000;
+}
+
+/*******************
+*  Course  *
+*******************/
+
+#course-view .weekscss .section,
+#course-view .section td.side {
+  background: #e6e6e6;
+}
+
+#course-view .weekscss .current,
+#course-view .current td.side {
+  background: #8a0000;
+}

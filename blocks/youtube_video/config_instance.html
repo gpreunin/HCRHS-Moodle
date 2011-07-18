@@ -1,0 +1,31 @@
+<?php
+	/* Youtube Video Playlist Moodle Block
+	 * Paul Holden, Greenhead College, 31st July 2007
+	 * http://gcmoodle.greenhead.ac.uk/external/youtube/
+	 * -------------------------------------------------
+	 * config_instance.html
+	 * Creates the tabs which link to specific functions in the block configuration page
+	 */
+	global $USER;	
+
+	$action = optional_param('action', 'configblock', PARAM_ALPHA);
+
+	$page = page_create_object($this->instance->pagetype, $this->instance->pageid);
+
+	$url = $page->url_get_full(array('instanceid' => $this->instance->id, 'sesskey' => $USER->sesskey, 'blockaction' => 'config', 'action' => ''));
+
+	$tabs = array();
+	$tabnames = array('configblock', 'editvid', 'managevids');
+	foreach ($tabnames as $tabname) {
+		$tabs[] = new tabObject($tabname, $url . $tabname, get_string('tab_' . $tabname, 'block_youtube_video'));
+	}
+
+	if (!in_array($action, $tabnames)) {
+		$action = 'configblock';
+	}
+
+	print_tabs(array($tabs), $action);
+
+	echo('<br />');
+	include("tab_$action.php");
+?>

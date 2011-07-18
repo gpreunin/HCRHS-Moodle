@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Solstice Theme Documentation</title>
+<style type="text/css">
+<!--
+
+body {
+	margin:10px;
+	font-family:Tahoma,Verdana,Arial,lucida,sans-serif;
+	color:#333;
+}
+h1 {
+	color: #ba0c12;
+	margin:0;
+	padding:0;
+	font-size:1.1em;
+}
+
+h2 {
+	font-size:1em;
+}
+
+h3 {
+	font-size:0.9em;
+}
+h4 {
+	font:0.8em/1.3em normal;
+	color:#555;
+	margin:0;
+	padding:0;
+}
+
+a:link, a:visited {
+	color:#333;
+	text-decoration:none;
+	border-bottom: 1px dashed #ba0c12;
+}
+a:hover, a:active {
+	color:#fff;
+	background:#555;
+	border-bottom:1px solid #ba0c12;
+	text-decoration:none
+}
+
+p, li {
+	font:0.75em/1.4em normal;
+}
+
+#contents {
+	border-bottom:1px dotted #333;
+	padding-bottom:35px;
+}
+
+.first {margin-top:20px}
+
+li {
+	padding-top:5px;
+}
+
+blockquote {
+	padding:5px;
+	border: 1px dashed #cecece;
+	background: #ececec;
+	color:#323232;
+	margin:3px;
+}
+blockquote p {
+	font: 12px "Courier New", Courier, monospace;
+	color: #000000;
+}
+blockquote p .red {
+	color: #FF0000;
+}
+blockquote p .blue {
+	color: #0033FF;
+}
+
+.notice {
+	background: #F4FF7C;
+	border: 1px dashed #C7F44E;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #333333;
+	display: block;
+	padding: 5px;
+}
+.bar {
+	height:1px; 
+	width:90%; 
+	background:#ccc; 
+	display:block; 
+	margin:10px auto 10px auto;
+}
+
+.download {
+	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #C9D2C9 url('pix/extras/package_go.png') no-repeat .5em center;
+	border-bottom: 2px solid #383;
+	border-top: 2px solid #383;
+}
+
+.alert,
+.errorboxcontent {
+	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #EA9089 url('pix/extras/exclamation.png') no-repeat .5em center;
+	border-bottom: 2px solid #f33;
+	border-top: 2px solid #f33;
+}
+
+.errorbox {
+  margin: auto !important;
+  border-left: none;
+  border-right: none;
+}
+.information {
+	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #AFB0BC url('pix/extras/information.png') no-repeat .5em center;
+	border-bottom: 2px solid #33f;
+	border-top: 2px solid #33f;
+}
+
+.construction {
+	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #ffffd5 url('pix/extras/error.png') no-repeat .5em center;
+	border-bottom: 2px solid #ff3;
+	border-top: 2px solid #ff3;
+}
+
+.code, code {
+  	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #aaa url('pix/extras/application_osx_terminal.png') no-repeat .5em center;
+	border-bottom: 2px solid #444;
+	border-top: 2px solid #444;
+	font-family: 'Courier New', Courier, Fixed;
+	font-size: 1.2em;
+}
+
+.note,
+.generalbox.adminwarning {
+	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #ccc url('pix/extras/page_white_text.png') no-repeat .5em center;
+	border-bottom: 2px solid #444;
+	border-top: 2px solid #444;
+}
+
+.new {
+	display: block;
+	padding: 5px 0 5px 40px;
+	margin: auto 25px ;
+	background: #A09187 url('pix/extras/new.png') no-repeat .5em center;
+	border-bottom: 2px solid #643;
+	border-top: 2px solid #643;
+	color: #000;
+}
+
+
+-->
+</style>
+</head>
+
+<body>
+<h1>Solstice Theme for Moodle</h1>
+<h4>Created by Patrick Malley<br />Owned by <a href="http://newschoollearning.com">NewSchool Learning</a><br />Support: <a href="http://support.newschoollearning.com/forum/solstice">http://support.newschoollearning.com/forum/solstice</a></h4>
+
+<p>Thank you for your purchase with NewSchool Learning. I hope that you enjoy working with this theme.  While this document should help make installation and setup as smooth as possible, it does assume a basic knowledge of HTML, Moodle, and CSS.  If, at any time, you feel lost, the best place to start is in the Moodle documentation at <a href="http://docs.moodle.org">http://docs.moodle.org</a>.  Then, if you still have questions, feel free to contact me via the support forum listed above.</p>
+
+<h2>Contents</h2>
+<ul id="contents">
+	<li class="first"><strong>Style Selection</strong></li>
+		<ul>
+			<li><a href="#styleselect">Selecting Style Sheet</a></li>
+			<li><a href="#pixselect">Selecting Background Images</a></li>
+		</ul>
+	<li class="first"><strong>Header Customization</strong></li>
+		<ul>
+			<li><a href="#logo">Adding a Logo</a></li>
+				<ul style="margin-bottom:10px;">
+					<li><a href="#HTMLLogo">Using HTML</a></li>
+					<li><a href="#CSSLogo">Using CSS (recommended)</a></li>
+				</ul>
+			<li><a href="#tagline">Adding a Tagline</a></li>
+			<li><a href="#header">Changing Header Size</a></li>
+			<li><a href="#nav">Customizing the Front Page Navigation Menu</a></li>
+		</ul>
+	<li class="first"><strong>Creating Custom Colors</strong></li>
+		<ul>
+			<li><a href="#Fireworks">Changing Background Image Colors</a></li>
+			<li><a href="#CSS">Changing CSS Colors</a></li>
+		</ul>
+	<li class="first"><strong>CSS Extras</strong></li>
+		<ul>
+			<li><a href="#extraon">Turning Extras On</a></li>
+			<li><a href="#extrause">Using CSS Extras</a></li>
+		</ul>
+</ul>
+
+<h1>Style Selection</h1>
+<p>Selecting a preferred style is a two step process:</p>
+<ol>
+	<li>You need to tell config.php which stylesheet to get.</li>
+	<li>You will need to change the file name of the background image files that you want to use.</li>
+</ol>
+<h2><a name="styleselect" id="logo"></a>Selecting Style Sheet</h2>
+
+<p>Theme style variations are as follows:</p>
+<div>
+<ol style="list-style:none;">
+	<li style="float:left; padding-right:15px; text-align:center;"><img src="pix/solstice_01.png" /><br />solstice_01</li>
+	<li style="float:left; padding-right:15px; text-align:center;"><img src="pix/solstice_02.png" /><br />solstice_02</li>
+	<li style="float:left; padding-right:15px; text-align:center;"><img src="pix/solstice_03.png" /><br />solstice_03</li>
+	<li style="float:left; padding-right:15px; text-align:center; padding-bottom:10px;"><img src="pix/solstice_04.png" /><br />solstice_04</li>
+</ol>
+<p style="clear:both;">To set up your theme so that it recognizes your preferred style variation:</p>
+<ol>
+	<li>Open config.php within the solstice folder.</li>
+	<li>Locate line 9, which, by default, should read:
+		<blockquote>
+			  <p>$THEME->sheets = array('styles_solstice', 'styles_solstice_<span class="blue">01</span>');</p>
+		</blockquote></li>
+	<li>Replace what appears in blue above with the numbered theme of your preference.</li>
+		<ul>
+			<li>Example:
+						  <blockquote><p>$THEME->sheets = array('styles_solstice', 'styles_solstice_<span class="blue">03</span>');</p>
+		</blockquote></li>
+		</ul>
+	<li>Save Changes.</li>
+</ol>
+</div>
+<h2><a name="pixselect" id="pixselect">Selecting Background Image Folder</a></h2>
+<p>All style sheets grab images from the same location: '/solstice/pix/bg/'.  For this reason, you will need to change the name of the "bg" folder for whichever theme variation you prefer to use to simply "bg" after renaming the current "bg" directory to something else ("bg_01" recommended).</p>
+<p>I probably made that sound much more complex than it is, so:</p>
+<ol>
+	<li>Open your "solstice" theme folder, then open "pix".</li>
+	<li>You will see 5 bg directories:</li>
+		<ol>
+			<li>bg</li>
+			<li>bg_02</li>
+			<li>bg_03</li>
+			<li>bg_04</li>
+		</ol>
+	<li>solstice only pulls background images from the folder called "bg" - so if you have changed to a theme variation other than "solstice_01" in the section above, you will need to also change the corersponding image directory to "bg".</li>
+		<ol>
+			<li>Rename "bg" to "bg_01"</li>
+			<li>Rename the image folder corresponding to your selected theme variation to "bg"</li>
+			<li>Done!</li>
+		</ol>
+</ol>
+<div class="bar"></div>
+
+<h1>Header Customization</h1>
+<h2><a name="logo" id="logo"></a>Adding a Logo</h2>
+
+<p>Moodle's header.html file is set up in two parts:</p>
+<ol>
+	<li>The first determines what is shown on the front page:
+		<blockquote><p>&lt;div id="<span class="red">header-home</span>" class="clearfix"&gt;<br />
+			&lt;div class="headermain"&gt;&lt;h1&gt;&lt;?php echo $heading ?&gt;&lt;/h1&gt;&lt;!--&lt;span class="description"&gt;&lt;?php echo $COURSE-&gt;summary ?&gt;&lt;/span&gt;--&gt;&lt;/div&gt;<br />
+        	&lt;div class="headermenu"&gt;&lt;?php echo $menu ?&gt;&lt;/div&gt;
+  &lt;/div&gt;</p>
+</blockquote>
+	</li>
+	<li>The second determines what is shown on all other pages:
+		<blockquote><p>&lt;div id="<span class="red">header</span>" class="clearfix"&gt;<br />
+			&lt;div class="headermain"&gt;&lt;h1&gt;&lt;?php echo $heading ?&gt;&lt;/h1&gt;&lt;/div&gt;
+        	&lt;div class="headermenu"&gt;&lt;?php echo $menu ?&gt;&lt;/div&gt;<br />
+  &lt;/div&gt;</p>
+</blockquote>
+	</li>
+</ol>
+<a name="HTMLLogo" id="HTMLLogo"></a><p>If you're not interested in "search engine optimization (SEO)," you can simply replace:</p>
+	<blockquote><p>&lt;h1&gt;<span class="red">&lt;?php echo $heading ?&gt;</span>&lt;/h1&gt;</p></blockquote>
+<p>with:</p>
+	<blockquote><p>&lt;h1&gt;<span class="blue">&lt;img src="/path/to/your/logo/yourlogo.png" /&gt;</span>&lt;/h1&gt;</p></blockquote>
+<p class="notice">Notice that you can add a logo to the front page, while retaining the "$heading" (course names, etc.) on all of the other pages.</p>
+<a name="CSSLogo" id="CSSLogo"></a><p>If you're like me and you like search engines to identify your site name using the H1 tag, you can leave the HTML alone, and opt instead to replace the H1 <em>text</em> with an image using CSS (thus allowing search engines to still "read" your site name):</p>
+	<ol>
+		<li>Open "styles_serenity.css".</li>
+		<li>Search for the string "#header-home .headermain h1".</li>
+		<li>Replace everything that appears in red with what appears in blue:
+			<blockquote><p>#header-home .headermain h1 {<br />
+  &nbsp;&nbsp;<span class="red" style="text-decoration:line-through">font: 1.8em normal;</span><br />
+  &nbsp;&nbsp;<span class="blue">background: url(/path/to/your/logo/yourlogo.png) no-repeat;<br />
+	  &nbsp;&nbsp;text-indent: -9999em;<br />
+}
+</p></blockquote>
+		</li>
+			<ul>
+		<li>Of course, if you wanted your logo on the course pages as well, you could always add that to the mix:
+	<blockquote><p>#header-home .headermain h1<span class="blue">,</span> <br />
+	<span class="blue">#header .headermain h1</span> {<br />
+  &nbsp;&nbsp;background: url(/path/to/your/logo/yourlogo.png) no-repeat;<br />
+	  &nbsp;&nbsp;text-indent: -9999em;<br />
+}<br />
+<br />
+<span class="red" style="text-decoration:line-through">#header .headermain h1 {<br />
+  &nbsp;&nbsp;font: 1.4em normal;<br />
+}
+</span>
+</p></blockquote>
+		</li>
+		</ul>
+	<li>Save your changes.</li>
+	</ol>
+<div class="bar"></div>
+
+<h2><a name="tagline" id="tagline"></a>Adding a Tagline</h2>
+
+<p>I have added a bit of PHP script that calls up your site description on the front page. By default, this script is commented out.  If you want to use it, all you have to do is make the following edit to header.html:</p>
+		<blockquote><p>&lt;div id="header-home" class="clearfix"&gt;<br />
+			&lt;div class="headermain"&gt;&lt;h1&gt;&lt;?php echo $heading ?&gt;&lt;/h1&gt;<span class="red" style="text-decoration:line-through">&lt;!--</span>&lt;span class="description"&gt;&lt;?php echo $COURSE-&gt;summary ?&gt;&lt;/span&gt;<span class="red" style="text-decoration:line-through">--&gt;</span>&lt;/div&gt;<br />
+        	&lt;div class="headermenu"&gt;&lt;?php echo $menu ?&gt;&lt;/div&gt;
+  &lt;/div&gt;</p>
+</blockquote>
+<p class="notice">Keep in mind that if you want to use this, you will have to keep the description short.  Your site description can be edited within your Moodle admin tree at "Front Page > Front Page Settings > Front Page Description"</p>
+<div class="bar"></div>
+
+<h2><a name="header" id="header"></a>Changing the Header Size</h2>
+
+<p>I have used a header image on both the front page and within the site that is 189px tall.  Using CSS, I have set the default height of the front page header to 160px and the header on all other pages to 90px.  To change these:</p>
+<ol>
+		<li>Open "styles_serenity.css".</li>
+		<li>Search for the string "Header".</li>
+		<li>Change what follows in red:
+			<blockquote><p>#header-home {<br/>
+  height: <span class="red">160px</span>;<br/>
+}<br/>
+<br/>
+#header {<br/>
+  height: <span class="red">90px</span>;<br/>
+}
+</p></blockquote>
+</li>
+</ol>
+<p class="notice">Remember, "#header-home" = front page; "#header" = all other pages</p>
+<div class="bar"></div>
+
+<h2><a name="nav" id="nav"></a>Customizing the Front Page Navigation Menu</h2>
+
+<p>For the sake of convenience (and to keep a consistent look and feel throughout the Moodle pages), I have added a navigation menu to header.html.  The two default links that appear have been set up to take users "Home" and to your installation's "Courses" page.  These links can be replaced with your choice of links, and more links can be added to fill up the bar.  To edit the links within the navigation bar:</p>
+	<ol>
+		<li>Open "header.html"</li>
+		<li>Search for the string "#front-nav"</li>
+		<li>Change what follows in red to your desired location.  Change what follows in blue to your desired text. <em>(To add more links, simply copy and paste the last list item [&lt;li&gt;&lt;/li&gt;] and make the appropriate changes).</em></li>
+			<blockquote><p> &lt;div id="front_nav" class="clearfix"&gt;<br />
+					&nbsp;&nbsp;&lt;ul id="nav"&gt;<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="page_item first"&gt;&lt;a href="<span class="red">&lt;?php echo $CFG->wwwroot ?&gt;</span>"&gt;<span class="blue">Home</span>&lt;/a&gt;&lt;/li&gt;<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="page_item"&gt;&lt;a href="<span class="red">&lt;?php echo $CFG->wwwroot ?&gt;/course/index.php/</span>"&gt;<span class="blue">Courses</span>&lt;/a&gt;&lt;/li&gt;<br />
+					&nbsp;&nbsp;&lt;/ul&gt;<br />
+				&lt;/div&gt;
+</p></blockquote>
+		</li>
+		<li>Save changes.</li>
+	</ol>
+<p class="notice">Keep in mind that identifying a relative path within your Moodle installation is easily accomplished using the above PHP script followed by your desired path.  For example: &lt;?php echo $CFG->wwwroot ?&gt;/yourpathhere/anyfile.php/"&gt; </p>
+<div class="bar"></div>
+
+<h1>Creating Custom Colors</h1>
+<h2><a name="Fireworks" id="Fireworks"></a>Changing Background Image Colors</h2>
+
+<p>For your convenience, I have included the Fireworks PNG files that I used to mock up this theme.  To change the background colors, this document will need to be modified and slices will need to be exported to their appropriate location.</p>
+
+<p class="notice">It is not recommended to edit using Photoshop because the program is unable to match exact web colors.</p>
+<p>To edit the background images:</p>
+	<ol>
+		<li>Open "SOURCE/SOLSTICE_0X_SOURCE.png" using Adobe Fireworks (where "0X" = "01", "02", etc.).</li>
+		<li>Hide slices and hotspots (available in the "Tools" menu or using by pressing "2" on your keyboard [on a Mac that is]).</li>
+		<li>
+Make desired color changes to the document.</li>
+		<li>Show slices and hotspots (again, in the "Tools menu, or just press "2").</li>
+		<li><img src="pix/fireworks.png" align="right" height="90" width="220" />From the menu bar, select File > Export.</li>
+		<li>Select the file you would like to Export your slices to.</li>
+		<li>Ensure that the Export settings look similar to the image to the right.</li>
+		<li>Press "Export"</li>
+		<li>If everything worked correctly, you should have a file containing 6-8 small images that will be used to make up the background of your theme. Replace the default images with your edited images and you should be good to go.</li>
+	</ol>
+<p class="notice">The same steps can be taken to edit the forum background image (FORUM_BG_SOURCE.png).</p>
+<div class="bar"></div>
+
+<h2><a name="CSS" id="CSS"></a>Changing the CSS Colors</h2>
+
+<p>I have seperated all color related items away from the main CSS document for easy editing.  To change the CSS colors of your theme:</p>
+	<ol>
+		<li>Open styles_solstice_0X.css (where "0X" = "01", "02", etc.)</li>
+		<li>If you know which colors you want to use, enter them into the appropriate spaces.  If you are unfamiliar with hex colors, you may want to visit a site such as <a href="http://colorcombos.com/">http://colorcombos.com/</a> for ideas.</li>
+	</ol>
+<div class="bar"></div>
+
+<h1>CSS Extras</h1>
+
+<p>Just for fun, I have added a CSS document filled with some extra goodies that you may want to use in your site.  By default, I have not included this CSS into the core of the theme.  So, if you want to use it you will have to "turn it on."</p>
+
+<h2><a name="extraon" id="extraon"></a>Turning Extras On</h2>
+
+<p>To use the CSS Extras included within this theme:</p>
+	<ol>
+		<li>Open config.php and add the following (in blue) to line 9:
+			<blockquote><p>$THEME->sheets = array('styles_solstice','styles_solstice_01'<span class="blue">,'styles_extras'</span>);
+</p></blockquote></li>
+		<li>Save Changes</li>
+	</ol>
+<p class="notice">Notice that the file extension (.css) is not included in this list.</p>
+
+<h2><a name="extrause" id="extrause"></a>Using CSS Extras</h2>
+
+<p>To use the CSS Extras (once turned on), simply enclose any text that you write (in plain text mode) as follows:</p>
+
+<p><span class="information">&lt;p class="information"&gt;Text goes here&lt;/p&gt; </span></p>
+
+<p><span class="alert">&lt;p class="alert"&gt;Text goes here&lt;/p&gt;</span></p>
+
+<p><span class="construction">&lt;p class="construction"&gt;Text goes here&lt;/p&gt;</span></p>
+
+<p><span class="download">&lt;p class="download"&gt;Text goes here&lt;/p&gt;</span></p>
+
+<p><code>&lt;code&gt;this is code?&lt;/code&gt;</code></p>
+
+<p><span class="note">&lt;p class="note"&gt;Text goes here&lt;/p&gt;</span></p>
+
+<p><span class="new">&lt;p class="new"&gt;Text goes here&lt;/p&gt;</span></p>
+
+<p>Please let me know if you have any trouble.</p>
+
+ptrkmkl.
+
+</body>
+</html>
