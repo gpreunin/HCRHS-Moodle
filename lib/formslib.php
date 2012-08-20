@@ -106,6 +106,21 @@ class moodleform {
      * @return moodleform
      */
     function moodleform($action=null, $customdata=null, $method='post', $target='', $attributes=null, $editable=true) {
+        global $CFG;
+        if (empty($CFG->xmlstrictheaders)) {
+            // no standard mform in moodle should allow autocomplete with the exception of user signup
+            // this is valid attribute in html5, sorry, we have to ignore validation errors in legacy xhtml 1.0
+            if (empty($attributes)) {
+                $attributes = array('autocomplete'=>'off');
+            } else if (is_array($attributes)) {
+                $attributes['autocomplete'] = 'off';
+            } else {
+                if (strpos($attributes, 'autocomplete') === false) {
+                    $attributes .= ' autocomplete="off" ';
+                }
+            }
+        }
+
         if (empty($action)){
             $action = strip_querystring(qualified_me());
         }
@@ -1145,6 +1160,10 @@ class MoodleQuickForm extends HTML_QuickForm_DHTMLRulesTableless {
             }
         }
 
+        if (is_array($this->_constantValues)) {
+            $unfiltered = HTML_QuickForm::arrayMerge($unfiltered, $this->_constantValues);
+        }
+
         if ($addslashes){
             return $this->_recursiveFilter('addslashes', $unfiltered);
         } else {
@@ -1482,7 +1501,7 @@ function validate_' . $this->_formName . '(frm) {
         } else if (is_a($element, 'HTML_QuickForm_hidden')) {
             return array();
 
-        } else if (method_exists($element, 'getPrivateName')) {
+        } else if (method_exists($element, 'getPrivateName') && !($element instanceof HTML_QuickForm_advcheckbox)) {
             return array($element->getPrivateName());
 
         } else {

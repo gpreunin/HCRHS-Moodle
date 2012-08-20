@@ -2741,13 +2741,13 @@ function set_moodle_cookie($thing) {
         return;
     }
 
-    $cookiename = 'MOODLEID_'.$CFG->sessioncookie;
+    $cookiename = 'MOODLEID1_'.$CFG->sessioncookie;
 
     $days = 60;
     $seconds = DAYSECS*$days;
 
     setCookie($cookiename, '', time() - HOURSECS, $CFG->sessioncookiepath, $CFG->sessioncookiedomain, $CFG->cookiesecure);
-    setCookie($cookiename, rc4encrypt($thing), time()+$seconds, $CFG->sessioncookiepath, $CFG->sessioncookiedomain, $CFG->cookiesecure);
+    setCookie($cookiename, rc4encrypt($thing, true), time()+$seconds, $CFG->sessioncookiepath, $CFG->sessioncookiedomain, $CFG->cookiesecure);
 }
 
 /**
@@ -2759,12 +2759,12 @@ function set_moodle_cookie($thing) {
 function get_moodle_cookie() {
     global $CFG;
 
-    $cookiename = 'MOODLEID_'.$CFG->sessioncookie;
+    $cookiename = 'MOODLEID1_'.$CFG->sessioncookie;
 
     if (empty($_COOKIE[$cookiename])) {
         return '';
     } else {
-        $thing = rc4decrypt($_COOKIE[$cookiename]);
+        $thing = rc4decrypt($_COOKIE[$cookiename], true);
         return ($thing == 'guest') ? '': $thing;  // Ignore guest account
     }
 }
@@ -6024,25 +6024,33 @@ function get_list_of_currencies() {
 /**
  * rc4encrypt
  *
- * @param string $data ?
- * @return string
- * @todo Finish documenting this function
+ * @param string $data        Data to encrypt.
+ * @param bool $usesecurekey  Lets us know if we are using the old or new password.
+ * @return string             The now encrypted data.
  */
-function rc4encrypt($data) {
-    $password = 'nfgjeingjk';
-    return endecrypt($password, $data, '');
+function rc4encrypt($data, $usesecurekey = false) {
+    if (!$usesecurekey) {
+        $passwordkey = 'nfgjeingjk';
+    } else {
+        $passwordkey = get_site_identifier();
+    }
+    return endecrypt($passwordkey, $data, '');
 }
 
 /**
  * rc4decrypt
  *
- * @param string $data ?
- * @return string
- * @todo Finish documenting this function
+ * @param string $data        Data to decrypt.
+ * @param bool $usesecurekey  Lets us know if we are using the old or new password.
+ * @return string             The now decrypted data.
  */
-function rc4decrypt($data) {
-    $password = 'nfgjeingjk';
-    return endecrypt($password, $data, 'de');
+function rc4decrypt($data, $usesecurekey = false) {
+    if (!$usesecurekey) {
+        $passwordkey = 'nfgjeingjk';
+    } else {
+        $passwordkey = get_site_identifier();
+    }
+    return endecrypt($passwordkey, $data, 'de');
 }
 
 /**
@@ -7083,12 +7091,17 @@ function generate_password($maxlen=10) {
         $filler1 = $fillers[rand(0, strlen($fillers) - 1)];
         $password = $word1 . $filler1 . $word2;
     } else {
-        $maxlen = !empty($CFG->minpasswordlength) ? $CFG->minpasswordlength : 0;
+        $minlen = !empty($CFG->minpasswordlength) ? $CFG->minpasswordlength : 0;
         $digits = $CFG->minpassworddigits;
         $lower = $CFG->minpasswordlower;
         $upper = $CFG->minpasswordupper;
         $nonalphanum = $CFG->minpasswordnonalphanum;
-        $additional = $maxlen - ($lower + $upper + $digits + $nonalphanum);
+        $total = $lower + $upper + $digits + $nonalphanum;
+        // minlength should be the greater one of the two ( $minlen and $total )
+        $minlen = $minlen < $total ? $total : $minlen;
+        // maxlen can never be smaller than minlen
+        $maxlen = $minlen > $maxlen ? $minlen : $maxlen;
+        $additional = $maxlen - $total;
 
         // Make sure we have enough characters to fulfill
         // complexity requirements
