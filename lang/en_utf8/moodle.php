@@ -910,7 +910,7 @@ $string['loginstepsnone'] = '<p>Hi!</p>
 <p>All you need to do is make up a username and password and use it in the form on this page!</p>
 <p>If someone else has already chosen your username then you\'ll have to try again using a different username.</p>';
 $string['loginto'] = 'Login to $a';
-$string['loginusing'] = 'Login here using your username and password';
+$string['loginusing'] = 'Login here using your Moodle username and password';
 $string['logout'] = 'Logout';
 $string['logoutconfirm'] = 'Do you really want to logout?';
 $string['logs'] = 'Logs';
@@ -1719,4 +1719,8 @@ $string['authenticationplugins'] = 'Authentication Plugins';
 $string['chooseauthmethod'] = 'Choose authentication plugin';
 $string['nocourses'] = 'No courses';
 $string['requestedcourses'] = 'Requested courses';
+
+$string['externalUserLogin']= 'Login form for external HCRHS users';
+$string['externalUserHelp']= 'Call 908-284-4444 to request a Moodle <br/>login username and password. 
+    <br/>___________________________________________';
 ?>

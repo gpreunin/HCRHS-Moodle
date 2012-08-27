@@ -1,3 +1,28 @@
+
+<style type="text/css">
+.hidden {display: none;}
+.unhidden {display: block;}
+</style>
+
+<script type="text/javascript">
+ function unhide(divID,textID) {
+ var item = document.getElementById(divID);
+ var text = document.getElementById(textID)
+ if (item) {
+     item.className=(item.className=='hidden')?'unhidden':'hidden';
+     if(text){
+         if(item.className=='hidden'){
+             text.innerHTML = 'Display';
+         }
+         else{
+             text.innerHTML = 'Hide'
+         }
+         
+     }
+ }
+ }
+ </script>
+ 
 <?php
 if ($show_instructions) {
     $columns = 'twocolumns';
@@ -6,8 +31,40 @@ if ($show_instructions) {
 }
 ?>
 <div class="loginbox clearfix <?php echo $columns ?>">
+<div class="loginpanel">
+     <h2><?php print_string("returningtosite") ?></h2>
+     <center>
+        
+        <?php
+$config = get_config('auth/saml');
+$authsequence = get_enabled_auth_plugins(true);
+
+if (in_array('saml', $authsequence)){
+    if (isset($config->samllogoimage) && $config->samllogoimage != NULL) {
+        echo '<a href="../auth/saml/index.php"><img src="../auth/saml/'.$config->samllogoimage.'" border="0" alt="SAML login" ></a>';
+    }
+    if (isset($config->samllogoinfo)) {
+        echo "<div class='desc'>$config->samllogoinfo</div>";
+    }
+}
+?>
+</center> 
+</div>
+</div>
+
+<p align="center">For those who do not have an HCRHS network login account<br/>  
+                  (Email address does not end with '@hcrhs.k12.nj.us' or '@hcrhs.org')<br/>
+    <a id="extUserDisplayText" href="javascript:unhide('externalUserForm','extUserDisplayText');">
+        <u>Click here to display</u></a> external user login form.</p>
+<div id="externalUserForm" class="hidden">
+<div class="loginbox clearfix: <?php echo $columns ?>">
   <div class="loginpanel">
-    <h2><?php print_string("returningtosite") ?></h2>
+    <h2><?php print_string("externalUserLogin") ?></h2>
+ 
+  <p align="center">
+  <?php print_string("externalUserHelp") ?>
+  </p>
+    
       <div class="subcontent loginsub">
         <div class="desc">
           <?php
@@ -18,7 +75,7 @@ if ($show_instructions) {
                 helpbutton("cookies", get_string("cookiesenabled"));
             }
            ?>
-        </div>
+        </div>  
         <?php
           if (!empty($errormsg)) {
               echo '<div class="loginerrors">';
@@ -101,5 +158,5 @@ if ($show_instructions) {
           } ?>
       </div>
     </div>
-<?php } ?>
 </div>
+<?php } ?>
