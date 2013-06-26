@@ -4,9 +4,9 @@
     <?php echo $meta ?>
     <meta name="keywords" content="moodle, <?php echo $title ?> " />
     <title><?php echo $title ?></title>
-    <link rel="shortcut icon" href="<?php echo $CFG->httpswwwroot.'/theme/'.current_theme() ?>/favicon.ico" />
-	<LINK REL=StyleSheet HREF="<?php echo $CFG->httpswwwroot.'/theme/'.current_theme() ?>/menubar.css" TYPE="text/css" MEDIA=screen>
-<LINK REL=StyleSheet HREF="<?php echo $CFG->httpswwwroot.'/theme/'.current_theme() ?>/print.css" TYPE="text/css" MEDIA=print>
+    <link rel="shortcut icon" href="<?php echo $CFG->wwwroot.'/theme/'.current_theme() ?>/favicon.ico" />
+	<LINK REL=StyleSheet HREF="<?php echo $CFG->wwwroot.'/theme/'.current_theme() ?>/menubar.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="<?php echo $CFG->wwwroot.'/theme/'.current_theme() ?>/print.css" TYPE="text/css" MEDIA=print>
     <?php include("$CFG->javascript"); ?>
 
 <script language="JavaScript">
@@ -62,9 +62,9 @@ window.attachEvent("onload", correctPNG);
     <div id="header-home">
 
   <div class="headermain"> 
-    <table width="954px" height="96" border="0" cellpadding="0" cellspacing="0" background="<?php echo $CFG->httpswwwroot.'/theme/'.current_theme() ?>/images/header-bg.jpg">
+    <table width="954px" height="96" border="0" cellpadding="0" cellspacing="0" background="<?php echo $CFG->wwwroot.'/theme/'.current_theme() ?>/images/header-bg.jpg">
       <tr>
-        <td rowspan="2"><a href="<?php echo $CFG->wwwroot.'/' ?>"><img src="<?php echo $CFG->httpswwwroot.'/theme/'.current_theme() ?>/images/logos/logo.png" alt="Moodle" title="Moodle" width="350" height="96" align="left" /></a></td>
+        <td rowspan="2"><a href="<?php echo $CFG->wwwroot.'/' ?>"><img src="<?php echo $CFG->wwwroot.'/theme/'.current_theme() ?>/images/logos/logo.png" alt="Moodle" title="Moodle" width="350" height="96" align="left" /></a></td>
         <td align="right" valign="top"> <div class="headermenu"><?php echo $menu ?></div></td>
       </tr>
       <tr> 
@@ -98,7 +98,7 @@ today =  days[now.getDay()] + " " +
 //document.write("" +today+ " ");
   
 //--></SCRIPT>
-          <img src="<?php echo $CFG->httpswwwroot.'/theme/'.current_theme() ?>/images/blank.gif" width="4" height="1" /> </td>
+          <img src="<?php echo $CFG->wwwroot.'/theme/'.current_theme() ?>/images/blank.gif" width="4" height="1" /> </td>
       </tr>
     </table>
        <div class="menubar">
@@ -113,9 +113,9 @@ today =  days[now.getDay()] + " " +
 <?php } else if ($heading) {  // This is what gets printed on any other page with a heading 
 ?>
     <div id="header-home">
-        <div class="headermain"><table width="954px" height="96" border="0" cellpadding="0" cellspacing="0" background="<?php echo $CFG->httpswwwroot.'/theme/'.current_theme() ?>/images/header-bg.jpg">
+        <div class="headermain"><table width="954px" height="96" border="0" cellpadding="0" cellspacing="0" background="<?php echo $CFG->wwwroot.'/theme/'.current_theme() ?>/images/header-bg.jpg">
       <tr>
-        <td rowspan="2"><a href="<?php echo $CFG->wwwroot.'/' ?>"><img src="<?php echo $CFG->httpswwwroot.'/theme/'.current_theme() ?>/images/logos/logo.png" alt="Moodle" title="Moodle" width="350" height="96" align="left" /></a></td>
+        <td rowspan="2"><a href="<?php echo $CFG->wwwroot.'/' ?>"><img src="<?php echo $CFG->wwwroot.'/theme/'.current_theme() ?>/images/logos/logo.png" alt="Moodle" title="Moodle" width="350" height="96" align="left" /></a></td>
         <td align="right" valign="top"> <div class="headermenu"><?php echo $menu ?></div></td>
       </tr>
       <tr> 
@@ -149,7 +149,7 @@ today =  days[now.getDay()] + " " +
 //document.write("" +today+ " ");
   
 //--></SCRIPT>
-          <img src="<?php echo $CFG->httpswwwroot.'/theme/'.current_theme() ?>/images/blank.gif" width="4" height="1" /> </td>
+          <img src="<?php echo $CFG->wwwroot.'/theme/'.current_theme() ?>/images/blank.gif" width="4" height="1" /> </td>
       </tr>
     </table>
               <div class="menubar">
