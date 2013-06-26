@@ -6,7 +6,7 @@
     require_once("lib.php");
     require_once("sirsteacherlib.php");
 
-    define("MAX_COURSES_PER_PAGE", 1000);
+    define("MAX_COURSES_PER_PAGE", 20);
 
     $id             = required_param('id',PARAM_INT); // course id
     $add            = optional_param('add', 0, PARAM_BOOL);
@@ -64,7 +64,7 @@
     if (!$frm = data_submitted()) {
         // gwp April 4, 2011
         //$note = get_string("importmetacoursenote");
-        $note = "Use this form to enroll students from your SIRS class section(s) into your Virtual Classroom";
+        $note = "Use this form to enroll students from your ASPEN class section(s) into your Virtual Classroom";
         print_simple_box($note, "center", "50%");
 
 /// A form was submitted so process the input
@@ -167,7 +167,6 @@
       } else {
           $courses = array();
       }
-
     }
 
     print_simple_box_start("center");
