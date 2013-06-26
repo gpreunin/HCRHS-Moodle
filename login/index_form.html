@@ -41,7 +41,7 @@ $authsequence = get_enabled_auth_plugins(true);
 
 if (in_array('saml', $authsequence)){
     if (isset($config->samllogoimage) && $config->samllogoimage != NULL) {
-        echo '<a href="../auth/saml/index.php"><img src="../auth/saml/'.$config->samllogoimage.'" border="0" alt="SAML login" ></a>';
+        echo '<a href="../auth/saml/index.php" title="Go to Single Sign On Form"><img src="../auth/saml/'.$config->samllogoimage.'" border="0" alt="SAML login" ></a>';
     }
     if (isset($config->samllogoinfo)) {
         echo "<div class='desc'>$config->samllogoinfo</div>";
