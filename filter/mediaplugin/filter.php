@@ -146,8 +146,8 @@ function mediaplugin_filter_mp3_callback($link) {
     $url = $link[1];
     $jsurl = addslashes_js($link[1]);
 
-    //$printlink = '<a href="'.$url.'">'.get_string('mp3audio', 'mediaplugin').'</a>';
-    $printlink=$link[0]; 
+    // $printlink = '<a href="'.$url.'">'.get_string('mp3audio', 'mediaplugin').'</a>';
+    $printlink = $link[0];
     return $printlink.
 '<span class="mediaplugin mediaplugin_mp3" id="'.$id.'">('.get_string('mp3audio', 'mediaplugin').')</span>
 <script type="text/javascript">
