@@ -8,6 +8,7 @@
 * @package questionnaire
 */
 
+require_once ($CFG->dirroot.'/mod/questionnaire/locallib.php');
 require_once ($CFG->dirroot.'/course/moodleform_mod.php');
 require_once($CFG->dirroot.'/mod/questionnaire/lib.php');
 
