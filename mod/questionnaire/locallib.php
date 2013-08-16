@@ -26,7 +26,8 @@ $ESPCONFIG['bgalt_color1']      = '#FFFFFF';
 $ESPCONFIG['css_path'] = $CFG->dirroot.'/mod/questionnaire/css/';
 
 
-require_once('questiontypes/questiontypes.class.php');
+require_once($CFG->dirroot.'/mod/questionnaire/questiontypes/questiontypes.class.php');
+require_once($CFG->dirroot.'/mod/questionnaire/lib.php');
 
 class questionnaire {
 
@@ -220,7 +221,7 @@ class questionnaire {
                 link_to_popup_window($url, $name, $linkname, $height, $width, $title, $options, false);
                 echo '</div>';
             }
-            $msg = $this->print_survey($USER->id, $quser);
+            $msg = $this->print_survey($quser,$USER->id);
             echo '</div>'; //div class="box generalbox boxaligncenter boxwidthwide"
 
     ///     If Survey was submitted with all required fields completed ($msg is empty),
@@ -454,7 +455,10 @@ class questionnaire {
     }
 
     function can_view_response($rid) {
-        global $USER;
+        global $USER,
+           $QUESTIONNAIRE_STUDENTVIEWRESPONSES_WHENANSWERED,
+           $QUESTIONNAIRE_STUDENTVIEWRESPONSES_WHENCLOSED,
+           $QUESTIONNAIRE_STUDENTVIEWRESPONSES_ALWAYS;
 
         if (!empty($rid)) {
             $response = get_record('questionnaire_response', 'id', $rid);
@@ -537,7 +541,7 @@ class questionnaire {
     }
 /// Display Methods
 
-    function print_survey($userid=false, $quser) {
+    function print_survey($quser, $userid=false) {
         global $USER, $PAGE, $CFG;
 
         if (!$userid) {
@@ -681,7 +685,7 @@ class questionnaire {
     </div>
     <?php
         if (isset($this->questions) && $num_sections) { // sanity check
-            $this->survey_render($formdata->sec, $msg, $formdata);
+            $this->survey_render($formdata,$formdata->sec, $msg );
             echo '<div class="notice" style="padding: 0.5em 0 0.5em 0.2em;"><div class="buttons">';
             if (($this->navigate) && ($formdata->sec > 1)) {
                 echo '<input type="submit" name="prev" value="'.get_string('previouspage', 'questionnaire').'" />';
@@ -707,7 +711,7 @@ class questionnaire {
         }
     }
 
-    function survey_render($section = 1, $message = '', &$formdata) {
+    function survey_render(&$formdata, $section = 1, $message = '') {
 
         $usehtmleditor = can_use_html_editor();
         $this->usehtmleditor = null;
@@ -852,7 +856,7 @@ class questionnaire {
         }
     }
 
-    function survey_print_render($message = '', $referer='', $courseid) {
+    function survey_print_render($courseid,$message = '', $referer='') {
         global $USER;
 
         $rid = optional_param('rid', 0, PARAM_INT);
@@ -2904,7 +2908,7 @@ function questionnaire_response_key_cmp($l, $r) {
     return ($lc > $rc) ? 1 : -1;
 }
 
-    function check_date ($thisdate, $insert=false) {
+    function check_date($thisdate, $insert=false) {
         $dateformat = get_string('strfdate', 'questionnaire');
         if (preg_match('/(%[mdyY])(.+)(%[mdyY])(.+)(%[mdyY])/', $dateformat, $matches)) {
             $date_pieces = explode($matches[2], $thisdate);
@@ -2996,7 +3000,7 @@ function questionnaire_response_key_cmp($l, $r) {
         echo $output;
     }
 
-    function questionnaire_preview ($questionnaire) {
+    function questionnaire_preview($questionnaire) {
         global $CFG;
         /// Print the page header
         /// Templates may not have questionnaires yet...
@@ -3032,7 +3036,7 @@ function questionnaire_response_key_cmp($l, $r) {
         $questionnaire->survey = get_record('questionnaire_survey', 'id', $sid);
         $n = count_records('questionnaire_question', 'survey_id', $sid, 'type_id', '99', 'deleted', 'n');
         for ($i=1; $i<$n+2 ; $i++) {
-            $questionnaire->survey_render($i, '', $formdata);
+            $questionnaire->survey_render($formdata,$i, '' );
         }
         close_window_button();
         echo '</div></div></body></html>';

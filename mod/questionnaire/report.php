@@ -3,6 +3,7 @@
 /// This page prints a particular instance of questionnaire
     global $SESSION, $CFG;
     require_once("../../config.php");
+    require_once ($CFG->dirroot.'/mod/questionnaire/locallib.php');        
     require_once($CFG->dirroot.'/mod/questionnaire/lib.php');
 
     $instance = optional_param('instance', false, PARAM_INT);   // questionnaire ID

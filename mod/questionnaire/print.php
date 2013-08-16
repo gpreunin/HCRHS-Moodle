@@ -1,7 +1,8 @@
 <?php // $Id$
 
-    require_once("../../config.php");
-    require_once($CFG->dirroot.'/mod/questionnaire/lib.php');
+   require_once("../../config.php");
+   require_once ($CFG->dirroot.'/mod/questionnaire/locallib.php');
+   require_once($CFG->dirroot.'/mod/questionnaire/lib.php');
 
     $qid = required_param('qid', PARAM_INT);
     $rid = required_param('rid', PARAM_INT);
@@ -41,7 +42,7 @@
     }
 
     print_header('Print Survey', '', '', '', $currentcss, true, '', '');
-    $questionnaire->survey_print_render('', '', $courseid);
+    $questionnaire->survey_print_render($courseid,'', '');
     close_window_button();
     echo '</body></html>';
 ?>

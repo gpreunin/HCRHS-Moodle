@@ -2,8 +2,9 @@
 
 /// This page displays a non-completable instance of questionnaire
 
-    require_once("../../config.php");
-    require_once($CFG->dirroot.'/mod/questionnaire/lib.php');
+   require_once("../../config.php");
+   require_once ($CFG->dirroot.'/mod/questionnaire/locallib.php');
+   require_once($CFG->dirroot.'/mod/questionnaire/lib.php');
 
     $id     = optional_param('id', 0, PARAM_INT);
     $sid    = optional_param('sid', 0, PARAM_INT);
@@ -75,7 +76,7 @@
     if (!$popup) {
         include('tabs.php');
     }
-    $questionnaire->survey_print_render('', '', $course->id);
+    $questionnaire->survey_print_render($course->id,'', '');
     if ($popup) {
         close_window_button();
         echo '</body></html>';

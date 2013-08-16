@@ -3,6 +3,7 @@
 /// This page shows results of a questionnaire to a student.
 
     require_once("../../config.php");
+    require_once ($CFG->dirroot.'/mod/questionnaire/locallib.php');    
     require_once($CFG->dirroot.'/mod/questionnaire/lib.php');
 
     $strsummary = get_string('summary', 'questionnaire');
