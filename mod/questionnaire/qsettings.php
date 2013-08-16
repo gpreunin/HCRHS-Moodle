@@ -22,6 +22,7 @@
 
     // needed here for forced language courses
     require_course_login($course->id);
+    require_once($CFG->dirroot.'/mod/questionnaire/locallib.php');    
     require_once($CFG->dirroot.'/mod/questionnaire/lib.php');
 
     $questionnaire = new questionnaire(0, $questionnaire, $course, $cm);

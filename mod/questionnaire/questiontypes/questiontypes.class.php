@@ -1302,7 +1302,7 @@ class questionnaire_question {
         $date_mess = '&nbsp;'.get_string('dateformatting', 'questionnaire');
         if (!empty($data->{'q'.$this->id})) {
             $dateentered = $data->{'q'.$this->id};
-            $setdate = check_date ($dateentered, false);
+            $setdate = check_date($dateentered, false);
             if ($setdate == 'wrongdateformat') {
                 $msg = get_string('wrongdateformat', 'questionnaire', $dateentered);
                 questionnaire_notify($msg);

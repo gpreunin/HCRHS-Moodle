@@ -2,6 +2,7 @@
 /// This page prints a particular instance of questionnaire
 
     require_once("../../config.php");
+    require_once ($CFG->dirroot.'/mod/questionnaire/locallib.php');    
     require_once($CFG->dirroot.'/mod/questionnaire/lib.php');
     require_once($CFG->dirroot.'/mod/questionnaire/questions_form.php');
 
